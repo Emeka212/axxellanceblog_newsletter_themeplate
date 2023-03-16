@@ -13,6 +13,7 @@
   <style>
     body {
       padding: 10%;
+      font-size: 14px;
       color: #f9f9f9;
       background-color: #202124;
       font-family: "Sono", sans-serif;
@@ -51,7 +52,7 @@
     /* INTRO SECTION */
     /*------------------------------------*/
     section > p {
-      padding: 20px;
+      padding: 20px 20px 0 20px;
     }
 
     /*-----------------------------------*/
@@ -63,23 +64,24 @@
 
     section > article > .articleCard {
       display: flex;
-      height: 250px;
+      flex-wrap: wrap;
       align-items: center;
-      margin-bottom: 20px;
+      margin-right: 100px;
     }
 
     section > article > .articleCard > img {
-      width: 250px;
-      height: inherit;
+      width: 200px;
+      height: 200px;
       object-fit: cover;
-      margin-right: 20px;
       border-radius: 10px;
+      margin: 20px 20px 0 0;
     }
 
     section > article > .articleCard > .articleDetails {
       display: flex;
-      height: inherit;
+      height: 200px;
       flex-direction: column;
+      width: calc(100% - 220px);
       justify-content: space-evenly;
     }
 
@@ -88,24 +90,27 @@
     }
 
     section > article > .articleCard > .articleDetails > span {
-      font-size: 17px;
+      font-size: 14px;
+      color: #999;
       overflow: hidden;
       white-space: normal;
       display: -webkit-box;
-      -webkit-line-clamp: 6;
+      -webkit-line-clamp: 5;
       text-overflow: ellipsis;
       -webkit-box-orient: vertical;
     }
 
     section > article > .articleCard > .articleDetails button {
-      width: 100px;
-      height: 40px;
+      width: 90px;
+      height: 30px;
       border: none;
       outline: none;
       cursor: pointer;
+      font-size: 13px;
       margin-top: 10px;
       font-weight: bold;
-      border-radius: 10px;
+      border-radius: 5px;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
     /*-----------------------------------*/
@@ -169,6 +174,34 @@
     footer > .socialMediaLink > .socialIcons > a > i {
       font-size: 25px;
     }
+
+    /*========================================*/
+    /* MEDIA QUERY FOR MOBILE DEVICE SIZE */
+    /*========================================*/
+    @media screen and (max-width: 600px) {
+      
+    section > article {
+      margin: 20px;
+    }
+      
+    section > article > .articleCard {
+      margin-right: 0px;
+      flex-direction: column;
+    }
+    
+    section > article > .articleCard > img {
+      width: 100%;
+      height: 250px;
+      margin: 20px 0;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    
+    section > article > .articleCard > .articleDetails {
+      width: 100%;
+      height: 200px;
+    }
+    }
   </style>
   <body>
     <section>
@@ -180,26 +213,38 @@
         Hey {{everyone}}!
         <br />
         <br />
-        Welcome back to the Axxellanceblog Weekly Newsletter. In today’s edition
-        we’re highlighting the top posts from our community, which includes an
-        in depth look at the Silicon Valley Bank crash, tips about economic
-        indicators, and all the latest headlines, earnings, and economic events.
-        <br />
-        <br />
-        Let’s jump in.
+        We hope this message finds you well. We are excited to share our latest blog post with you! Today, we published a new article on our website, and we believe you will find it both informative and engaging. If you haven't had a chance to read it yet, we encourage you to take a moment to check it out.
       </p>
       <article>
         <div class="articleCard">
-          <img src="" alt="blog image" />
+          <img
+            src="https://axxellanceblog.com/_next/image?url=https%3A%2F%2Fdirectus.axxellanceblog.com%2Fassets%2F45e9bd42-75f3-48f6-9c54-706fd55e50c8%2Fimg.png&w=1920&q=75"
+            alt="blog image"
+          />
           <div class="articleDetails">
-            <b class="title"></b>
-            <span class="desc"></span>
-            <a href="">
+            <b class="title">How To Install Appwrite on Ubuntu</b>
+            <span class="desc"
+              >Are you looking for a powerful, open-source backend for your web
+              or mobile application? Look no further than Appwrite! Appwrite
+              offers a suite of features such as authentication, database
+              management, and storage solutions that make it easy to develop and
+              deploy robust applications.</span
+            >
+            <a
+              href="https://axxellanceblog.com/posts/how-to-install-appwrite-on-ubuntu"
+            >
               <button>Read More</button>
             </a>
           </div>
         </div>
       </article>
+      <p>
+        As always, we appreciate your continued support and interest in our blog. Thank you for being a valued member of our community, and we look forward to sharing more insightful content with you in the future.
+        <br />
+        <br />
+        Best regards,
+        Axxellanceblog
+      </p>
       <footer>
         <div class="profile">
           <img
